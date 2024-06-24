@@ -30,7 +30,7 @@ var server = http.createServer(function(request,response)
     }
 
     response.write(output);
-    response.end()
+    response.end()//
 })
 server.listen(5000);
 console.log("ready to accept the request")

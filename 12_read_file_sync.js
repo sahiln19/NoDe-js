@@ -17,6 +17,6 @@ var server = http.createServer(function(request,response)
         response.write('<h1>File not found</h1>')
         return response.end()
     }
-})
+})//
 server.listen(5000);
 console.log('server is ready to accept request')

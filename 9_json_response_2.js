@@ -8,7 +8,7 @@ const dishes = [
             fat: "20g",
             carbohydrates: "55g"
         }
-    },
+    },//
     {
         dishName: "Palak Paneer",
         nutrition: {
