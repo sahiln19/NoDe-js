@@ -1,0 +1,41 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Company Information
+    // Bootstrap 5 CSS CDN
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css', rel='stylesheet')
+  body
+    .container.mt-5
+      .row
+        .col-lg-6.offset-3
+          .card.shadow
+            .card-header.bg-primary.text-white
+              h3 Company Information
+            .card-body
+              h4.card-title
+                | Company Name: 
+                span.text-secondary Legend Era
+              p.card-text
+                strong Name:
+                | #{name}
+              p.card-text
+                strong Branch Address:
+                | #{address}
+              p.card-text
+                strong City:
+                | #{city}
+              p.card-text
+                strong Pincode:
+                | #{pincode}
+              p.card-text
+                strong Contact No:
+                | #{contactno}
+              p.card-text
+                strong Email:
+                | #{email}
+
+                a(href='mailto:info@yourcompany.com') info@yourcompany.com
+    // Bootstrap 5 JS and Popper.js CDN
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js')
