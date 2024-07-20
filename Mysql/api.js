@@ -2,7 +2,7 @@ var express = require('express');
 var parser = require('body-parser');
 var users = require('./users');
 var app = express();
-app.use(express.urlencoded('extended',true));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 const ROUTE = "/patient";

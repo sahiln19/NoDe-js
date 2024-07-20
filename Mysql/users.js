@@ -1,22 +1,21 @@
 var connection = require("./connection");
-let insert = function(request,response){
-    let sql = " insert into customers (customerName,contactLastName,contactFirstName,phone,addressLine1,addressLine2,city,state,postalCode,country,salesRepEmployeeNumber, 	creditLimit)n values ('"+request.body.customerName+"','"+request.body.contactLastName+"','"+request.body.contactFirstName+"','"+request.body.phone+"','"+request.body.addressLine1+"','"+request.body.addressLine2+"','"+request.body.city+"','"+request.body.state+"','"+request.body.postalCode+"','"+request.body.country+"','"+request.body.salesRepEmployeeNumber+"','"+request.body.creditLimit+"')"
-    
-    connection.db.query(sql,function(error,result){
-        if(error != null){
-            response.send("[{'error': 'error}]");
-            console.log(error);
-        }
-        else
-        {
-            response.send("[{'error': 'no}, {'message': 'success'}]");
-        }
-    })
-       response.send('insert data')
 
+let insert = function(request, response) {
+    let sql = "INSERT INTO customers (customerName, contactLastName, contactFirstName, phone, addressLine1, addressLine2, city, state, postalCode, country, salesRepEmployeeNumber, creditLimit) VALUES ('sahil', 'nakiya', 'sahil', '1234567890', 'address1', 'address2', 'city', 'state', '123456', 'india', '123', '123456')";
+    
+    connection.db.query(sql, function(error, result) {
+        if (error != null) {
+            response.json([{ 'error': 'error' }]);
+            console.log(error);
+        } else {
+            response.json([{ 'error': 'no' }, { 'message': 'success' }]);
+        }
+    });
 }
-let update = function(request,response){
-    response.send('update data')
+
+let update = function(request, response) {
+    response.json('update data');
 }
+
 module.exports.insert = insert;
 module.exports.update = update;
