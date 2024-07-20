@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 var setting = {
     database : 'frontend24',
-    host : 'localhost',
-    user : 'root',
-    password : '',
-    port : 3308
+    user: 'root',
+    password:'',
+    port: 3306,
+    host:'localhost'
 }
  
 var db = mysql.createConnection(setting)

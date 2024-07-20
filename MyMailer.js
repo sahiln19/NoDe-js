@@ -3,7 +3,7 @@ class MyMail
     constructor()
     {
         this.sender = "sahilnakiyam5@gmail.com";
-        this.host = "gmsil.com";
+        this.host = "gmail.com";
         this.password =  "123123"
     }
     send( reciver, subject , message)
