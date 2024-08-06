@@ -1,20 +1,19 @@
 var mysql = require('mysql');
-var setting = {
+var settings = {
     database : 'frontend24',
     user: 'root',
     password:'',
-    port: 3306,
+    port:3306,
     host:'localhost'
-}
- 
-var db = mysql.createConnection(setting)
+};
+var db = mysql.createConnection(settings);
 db.connect(function(error){
-    if(error){
-        console.log('Error in establishing connection with database');
+    if(error)
+    {
+        console.log('error in establishing connection');
         console.log(error);
     }
-    else {
-        console.log('connection created')
-    }
-})
+    else 
+        console.log('connection created');
+});
 module.exports.db = db;
